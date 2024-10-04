@@ -52,7 +52,7 @@ async function Addrole(){
         client.end()
     })}
 //----------------------------------
-    if(resp.role == 'Maintenace'){
+    if(resp.department == 'Maintenace'){
         
      
         const res =client.query(`INSERT INTO role(id,title,salary,department_id) VALUES (${RanNum},'${resp.title}','${resp.salary}',4567) RETURNING * `, (res,err)=>{
@@ -66,7 +66,7 @@ async function Addrole(){
             client.end()
         })}
     //----------------------------------
-        if(resp.role == 'Housekeeping'){
+        if(resp.department == 'Housekeeping'){
             
          
             const res =client.query(`INSERT INTO role(id,title,salary,department_id) VALUES (${RanNum}, '${resp.title}','${resp.salary}',1788) RETURNING * `, (res,err)=>{
@@ -81,7 +81,7 @@ async function Addrole(){
                 client.end()
             })}
         //----------------------------------
-        if(resp.role == 'Food_and_bevarage'){
+        if(resp.department == 'Food_and_bevarage'){
             
          
             const res =client.query(`INSERT INTO role(id,title,salary,department_id) VALUES (${RanNum}, '${resp.title}','${resp.salary}',9356) RETURNING * `, (res,err)=>{
@@ -95,7 +95,7 @@ async function Addrole(){
                 client.end()
             })}
         //----------------------------------
-        if(resp.role == 'Engineering'){
+        if(resp.department == 'Engineering'){
            
             const res =client.query(`INSERT INTO role(id,title,salary,department_id) VALUES (${RanNum}, '${resp.title}','${resp.salary}',8903) RETURNING * `, (res,err)=>{
                 if(!err){
@@ -109,7 +109,7 @@ async function Addrole(){
             })}
         
             //----------------------------------
-        if(resp.role == 'Houseman'){
+        if(resp.department == 'Houseman'){
            
             const res =client.query(`INSERT INTO role(id,title,salary,department_id) VALUES (${RanNum}, '${resp.title}','${resp.salary}',4034) RETURNING * `, (res,err)=>{
                 if(!err){
