@@ -111,7 +111,7 @@ async function Addrole(){
             //----------------------------------
         if(resp.role == 'Houseman'){
            
-            const res =client.query(`IINSERT INTO role(id,title,salary,department_id) VALUES (${RanNum}, '${resp.title}','${resp.salary}',4034) RETURNING * `, (res,err)=>{
+            const res =client.query(`INSERT INTO role(id,title,salary,department_id) VALUES (${RanNum}, '${resp.title}','${resp.salary}',4034) RETURNING * `, (res,err)=>{
                 if(!err){
                    console.log(res)
                    console.log('Role is added to the database')
